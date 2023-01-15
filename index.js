@@ -3,7 +3,7 @@ const fs = require('fs');
 const app = express();
 
 app.get('/file', (req, res) => {
-  fs.readFile('file.txt', 'utf8', (err, data) => {
+  fs.readFile('FOLDER_NAME.txt', 'utf8', (err, data) => {
     if (err) return res.status(500).send(err);
     res.send(`<div id="file-contents">${data}</div>`);
   });
